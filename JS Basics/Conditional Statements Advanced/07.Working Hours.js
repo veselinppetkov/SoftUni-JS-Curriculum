@@ -1,0 +1,31 @@
+function workingHs(input) {
+
+    let hour = Number(input[0]);
+    let day = input[1];
+
+    switch (day) {
+        case "Monday":
+        case "Tuesday":	
+        case "Wednesday":
+        case "Thursday":
+        case "Friday":
+        case "Saturday":
+
+        if (hour >= 10 && hour <= 18) {
+            console.log ("open");
+        } else {
+            console.log("closed");
+        }
+        break; 
+
+        default: console.log("closed");
+        break; 
+
+    }
+}
+
+workingHs(["15", "Sunday"]);
+workingHs(["11", "Monday"]);
+workingHs(["19", "Friday"]);
+workingHs(["15", "Saturday"]);
+
