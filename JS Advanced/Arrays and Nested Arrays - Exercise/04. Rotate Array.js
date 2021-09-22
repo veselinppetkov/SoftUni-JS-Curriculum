@@ -1,7 +1,6 @@
 function rotate(arr, rotation) {
   for (let i = 0; i < rotation; i++) {
-    let spliced = arr.splice(arr.length - 1, 1).join("");
-    arr.unshift(spliced);
+    arr.unshift(arr.pop());
   }
   console.log(arr.join(" "));
 }
