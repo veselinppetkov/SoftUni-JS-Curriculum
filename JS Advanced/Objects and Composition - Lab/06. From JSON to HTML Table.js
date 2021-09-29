@@ -1,10 +1,12 @@
 function fromJsonToHTML(input) {
   let arr = JSON.parse(input);
   let outputArr = [];
+  
   outputArr.push("<table>");
   outputArr.push(addTableHeader(arr));
   arr.forEach((object) => outputArr.push(addTableEntry(object)));
   outputArr.push("</table>");
+
   function addTableHeader(array) {
     let output = "\t<tr>";
     Object.keys(array[0]).forEach((key) => {
