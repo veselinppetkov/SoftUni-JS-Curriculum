@@ -1,0 +1,15 @@
+[
+    {
+        "img":"https://i.pinimg.com/originals/0f/01/61/0f01612aea4b1452bfda2bbf7d0b6eec.png",
+        "name": "Cat Sofa",
+        "price": "259",
+        "decFactor":"0.4"
+
+    },
+    {
+        "img":"https://www.stylespafurniture.com/wp-content/uploads/2020/03/Cove_3_Door_Wardrobe_1.jpg",
+        "name": "Wardrobe",
+        "price": "120",
+        "decFactor":"1.2"
+    }
+]
