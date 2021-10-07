@@ -65,9 +65,9 @@ function solve() {
 
       buyArea.textContent = `Bought furniture: ${names.join(
         ", "
-      )}\nTotal price: ${total.toFixed(2)}\nAverage decoration factor: ${
-        decFactor / names.length
-      }`;
+      )}\nTotal price: ${total.toFixed(
+        2
+      )}\nAverage decoration factor: ${decFactor/names.length}`;
     }
   }
 }
