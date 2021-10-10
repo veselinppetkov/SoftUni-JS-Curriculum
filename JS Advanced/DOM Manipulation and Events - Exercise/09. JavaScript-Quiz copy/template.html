@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="template.css">
+    <title>BBY Quiz</title>
+    <script src="./solution.js"></script>
+</head>
+
+<body>
+    <div id="quizzie">
+        <h1>Bby Quiz&#169;</h1>
+
+        <section>
+            <ul class="quiz-step step1 current">
+                <li class="question">
+                    <div class="question-wrap">
+                        <h2>Въпрос #1: Кой обичам?</h2>
+                    </div>
+                </li>
+                <li class="quiz-answer low-value" data-quizIndex="2">
+                    <div class="answer-wrap">
+                        <p class="answer-text">Обичам мъжа</p>
+                    </div>
+                </li>
+                <li class="quiz-answer high-value" data-quizIndex="4">
+                    <div class="answer-wrap">
+                        <p class="answer-text">Обичам кучето</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="hidden">
+            <ul class="quiz-step step1 current">
+                <li class="question">
+                    <div class="question-wrap">
+                        <h2>Въпрос #2: Ко пас?</h2>
+                    </div>
+                </li>
+                <li class="quiz-answer low-value" data-quizIndex="2">
+                    <div class="answer-wrap">
+                        <p class="answer-text">Пробвам quiz-чето на Бъбито</p>
+                    </div>
+                </li>
+                <li class="quiz-answer high-value" data-quizIndex="4">
+                    <div class="answer-wrap">
+                        <p class="answer-text">Ами нищоооооооо....</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="hidden">
+            <ul class="quiz-step step1 current">
+                <li class="question">
+                    <div class="question-wrap">
+                        <h2>Въпрос #3: Ама че....</h2>
+                    </div>
+                </li>
+                <li class="quiz-answer low-value" data-quizIndex="2">
+                    <div class="answer-wrap">
+                        <p class="answer-text">ЯКОООООО</p>
+                    </div>
+                </li>
+                <li class="quiz-answer high-value" data-quizIndex="4">
+                    <div class="answer-wrap">
+                        <p class="answer-text">пече навън</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <ul id="results">
+            <li class="results-inner">
+                <h1></h1>
+            </li>
+        </ul>
+    </div>
+    </main>
+    </div>
+    <script>
+        solve();
+    </script>
+</body>
+
+</html>
