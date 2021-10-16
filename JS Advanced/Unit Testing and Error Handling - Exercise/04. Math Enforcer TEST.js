@@ -26,6 +26,7 @@ describe(`Add five test package`, () => {
   describe(`Sum test package`, () => {
     it(`Both valid`, () => {
       expect(mathEnforcer.sum(1, "2")).to.equal(undefined);
+      expect(mathEnforcer.sum("2", 1)).to.equal(undefined);
       expect(mathEnforcer.sum("1", "2")).to.equal(undefined);
       expect(mathEnforcer.sum("Test", "Test")).to.equal(undefined);
       expect(mathEnforcer.sum(1)).to.equal(undefined);
