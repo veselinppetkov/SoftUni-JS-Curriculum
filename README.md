@@ -4,7 +4,7 @@
 
 
 # Certificates
-| Course  | Result |
+| Course  | Grade |
 | ------------- | ------------- |
 | [Programming Basics with JS](https://softuni.bg/trainings/3362/programming-basics-with-javascript-april-2021)  | [Click](https://softuni.bg/certificates/details/106635/fdf2a94e) 
 | [Programming Fundamentals with JS](https://softuni.bg/trainings/3367/js-fundamentals-may-2021)  | [Click](https://softuni.bg/certificates/details/111287/4aa78be1)  |
