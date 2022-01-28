@@ -1,39 +1,16 @@
-const http = require(`http`);
-const fs = require(`fs`);
+const express = require(`express`);
+const app = express();
 
-const server = http.createServer((req, res) => {
-  switch (req.url) {
-    case "/":
-      let content = fs.readFileSync(`./views/home/index.html`);
-      res.writeHead(200, {
-        "Content-Type": "text/html",
-      });
-      res.write(content);
-      res.end();
-      break;
+const { create } = require(`express-handlebars`);
+const hbs = create({ extname: ".hbs" });
 
-    case "/styles/site.css":
-      let css = fs.readFileSync(`./styles/site.css`);
-      res.writeHead(200, {
-        "Content-Type": "text/css",
-      });
-      res.write(css);
-      res.end();
-      break;
+app.engine(`.hbs`, hbs.engine);
+app.set(`view engine`, `.hbs`);
 
-    case "/js/script.js":
-      let js = fs.readFileSync(`./js/script.js`);
-      res.writeHead(200, {
-        "Content-Type": "text/javascript",
-      });
-      res.write(js);
-      res.end();
-      break;
-
-    default:
-      res.statusCode = 404;
-      break;
-  }
+app.get(`/`, (req, res) => {
+  res.render(`home`);
 });
 
-server.listen(3000);
+app.use(express.static(`./public`));
+
+app.listen(3000);
