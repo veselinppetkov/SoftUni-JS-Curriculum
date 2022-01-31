@@ -1,13 +1,15 @@
 const Cube = require(`../models/Cube.js`);
 
-const getAll = () => Cube.cubes;
+const getAllCubes = () => Cube.cubes;
 
-const create = (name, description, imageUrl, difficultyLevel) => {
+const getCubeById = (id) => Cube.cubes.find((x) => x.id == id);
+
+const createCube = (name, description, imageUrl, difficultyLevel) => {
   const cube = new Cube(name, description, imageUrl, difficultyLevel);
 
   Cube.addCube(cube);
 };
 
-const cubeService = { create, getAll };
+const cubeService = { createCube, getAllCubes, getCubeById };
 
 module.exports = cubeService;
