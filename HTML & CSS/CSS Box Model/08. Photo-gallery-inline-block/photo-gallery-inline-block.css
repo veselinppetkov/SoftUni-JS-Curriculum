@@ -1,0 +1,21 @@
+ul.gallery{
+text-align: center;
+}
+
+ul.gallery li {
+    border-width: -0.4rem;
+    border-color: black;
+    border-style: solid;
+    list-style: none;
+    padding: 10px;
+    width: 300px;
+    margin: 50px;
+    display: inline-block;
+}
+
+img {
+    max-width: 300px;
+}
+
+
+
