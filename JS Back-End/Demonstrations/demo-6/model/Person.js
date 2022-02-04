@@ -9,6 +9,10 @@ const personSchema = new mongoose.Schema({
     min: [1, `Cannot be lower than 1, got {VALUE}`],
     max: [100, `Cannot exceed the age of 100, got {VALUE}`],
   },
+  pet: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Pet",
+  },
 });
 
 personSchema.methods.getAge = function () {

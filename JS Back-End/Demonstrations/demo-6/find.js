@@ -1,5 +1,6 @@
 const initDb = require(`./config.js`);
 const Person = require(`./model/Person.js`);
+const Pet = require(`./model/Pet.js`);
 
 // First method
 //       |
