@@ -1,6 +1,6 @@
-const mongodb = require(`mongodb`);
+const mongoose = require(`mongoose`);
 const connectionStr = `mongodb://localhost:27017/mytestdb`;
 
-const initDb = () => new mongodb.MongoClient(connectionStr);
+const initDb = () => mongoose.connect(connectionStr);
 
 module.exports = initDb;
