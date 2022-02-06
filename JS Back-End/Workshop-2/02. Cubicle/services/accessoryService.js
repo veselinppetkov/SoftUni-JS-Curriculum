@@ -8,6 +8,15 @@ const createAccessory = async (name, description, imageUrl) => {
   });
 };
 
-const accessoryService = { createAccessory };
+const getAllAccessories = Accessory.find({}).lean();
+
+const getAllWithout = async (accessoryIds) =>
+  await (await Accessory.find().where(`_id`)).findIndex(accessoryIds).lean();
+
+const accessoryService = {
+  getAllAccessories,
+  getAllWithout,
+  createAccessory,
+};
 
 module.exports = accessoryService;

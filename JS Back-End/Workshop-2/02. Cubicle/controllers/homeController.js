@@ -13,10 +13,10 @@ router.get(`/about`, (req, res) => {
   res.render(`about`);
 });
 
-router.get(`/search`, (req, res) => {
+router.get(`/search`, async (req, res) => {
   const { search, from, to } = req.query;
 
-  let cubes = searchCube(search, from, to);
+  const cubes = await searchCube(search, from, to);
 
   res.render(`index`, { cubes });
 });
