@@ -1,19 +1,28 @@
-class Cube {
-  constructor(name, description, imageUrl, difficultyLevel) {
-    this.id = uniqid();
-    this.name = name;
-    this.description = description;
-    this.imageUrl = imageUrl;
-    this.difficultyLevel = difficultyLevel;
-  }
+const mongoose = require(`mongoose`);
 
-  static get cubes() {
-    return Cube.#cubes.slice();
-  }
+const cubeSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+    maxlength: 500,
+  },
+  imageUrl: {
+    type: String,
+    required: true,
+    validate: [/^https?:\/\//, `ImageURL is invalid`],
+  },
+  difficultyLevel: {
+    type: Number,
+    required: true,
+    min: 1,
+    max: 6,
+  },
+});
 
-  static addCube(cube) {
-    Cube.#cubes.push(cube);
-  }
-}
+const Cube = (`Cube`, cubeSchema);
 
 module.exports = Cube;

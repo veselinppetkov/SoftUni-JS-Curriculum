@@ -1,11 +1,9 @@
-const uniqid = require(`uniqid`);
+const mongoose = require(`mongoose`);
 
-[
-  {
-    id: uniqid(),
-    name: "Ice Cube",
-    description: "A rapper",
-    imageUrl: "https://bit.ly/3IVdQxD",
-    difficultyLevel: "5",
-  },
-];
+async function initDb(connectionString) {
+  await mongoose.connect(connectionString);
+}
+
+initDb();
+
+module.exports = initDb;
