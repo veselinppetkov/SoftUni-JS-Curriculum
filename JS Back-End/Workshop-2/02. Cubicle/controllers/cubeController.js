@@ -7,11 +7,15 @@ router.get(`/create`, (req, res) => {
   res.render(`create`);
 });
 
-router.post(`/create`, (req, res) => {
+router.post(`/create`, async (req, res) => {
   const { name, description, imageUrl, difficultyLevel } = req.body;
 
-  createCube(name, description, imageUrl, difficultyLevel);
-  res.redirect(`/`);
+  try {
+    await createCube(name, description, imageUrl, difficultyLevel);
+    res.redirect(`/`);
+  } catch (err) {
+    res.send(err.message);
+  }
 });
 
 router.get(`/:cubeId`, (req, res) => {
