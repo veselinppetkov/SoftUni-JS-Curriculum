@@ -1,17 +1,20 @@
 const Cube = require(`../models/Cube.js`);
 
-const getAllCubes = () => Cube.cubes;
+const getAllCubes = () => Cube.find({}).lean();
 
-const getCubeById = (id) => Cube.cubes.find((x) => x.id == id);
+const getCubeById = (id) => Cube.findById(id);
 
-const createCube = (name, description, imageUrl, difficultyLevel) => {
-  const cube = new Cube(name, description, imageUrl, difficultyLevel);
-
-  Cube.addCube(cube);
+const createCube = async (name, description, imageUrl, difficultyLevel) => {
+  await Cube.create({
+    name,
+    description,
+    imageUrl,
+    difficultyLevel,
+  });
 };
 
 const searchCube = (title, from, to) => {
-  let result = Cube.cubes;
+  let result = getAllCubes();
 
   if (title) {
     result = result.filter((x) =>
