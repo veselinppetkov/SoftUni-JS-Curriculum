@@ -3,8 +3,9 @@ const router = Router();
 
 const { getAllCubes, searchCube } = require(`../services/cubeService`);
 
-router.get(`/`, (req, res) => {
-  const cubes = getAllCubes();
+router.get(`/`, async (req, res) => {
+  const cubes = await getAllCubes();
+
   res.render(`index`, { cubes });
 });
 
