@@ -18,9 +18,9 @@ router.post(`/create`, async (req, res) => {
   }
 });
 
-router.get(`/:cubeId`, (req, res) => {
+router.get(`/:cubeId`, async (req, res) => {
   const id = req.params.cubeId;
-  const cube = getCubeById(id);
+  const cube = await getCubeById(id);
 
   res.render(`details`, { cube });
 });
