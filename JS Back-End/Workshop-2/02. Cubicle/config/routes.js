@@ -6,7 +6,7 @@ const homeController = require(`../controllers/homeController.js`);
 const errorController = require(`../controllers/errorController.js`);
 
 router.use(express.static(`static`));
-router.use(express.urlencoded());
+router.use(express.urlencoded({ extended: true }));
 
 router.use(homeController);
 router.use(`/cube`, cubeController);
