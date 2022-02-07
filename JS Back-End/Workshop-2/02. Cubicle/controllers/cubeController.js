@@ -5,7 +5,7 @@ const cubeAccessoryController = require(`./cubeAccessoryController`);
 const router = express.Router();
 
 router.get(`/create`, (req, res) => {
-  res.render(`create`);
+  res.render(`cube/create`);
 });
 
 router.post(`/create`, async (req, res) => {
@@ -23,7 +23,7 @@ router.get(`/:cubeId`, async (req, res) => {
   const id = req.params.cubeId;
   const cube = await getCubeById(id);
 
-  res.render(`cube/details`, { cube });
+  res.render(`cube/accessory/details`, { cube });
 });
 
 router.use(`/:cubeId/accessory`, cubeAccessoryController);

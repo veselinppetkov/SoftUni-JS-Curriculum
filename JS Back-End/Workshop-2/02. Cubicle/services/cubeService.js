@@ -15,7 +15,7 @@ const createCube = async (name, description, imageUrl, difficultyLevel) => {
 };
 
 const searchCube = async (title, from, to) => {
-  const result = await getAllCubes();
+  let result = await getAllCubes();
 
   if (title) {
     result = result.filter((x) =>
@@ -39,7 +39,6 @@ const attachAccessory = async (cubeId, accessoryId) => {
   const accessory = await Accessory.getAccessoryById(accessoryId);
 
   cube.accessories.push(accessory);
-
   return cube.save();
 };
 
