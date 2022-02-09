@@ -1,0 +1,30 @@
+body {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer";
+    grid-template-columns: 100px auto;
+    gap:10px;
+}
+
+
+header {
+    grid-area: header;
+    background-color: lime;
+}
+
+aside {
+    grid-area: aside;
+    background-color: lightcoral
+}
+
+main {
+    grid-area: main;
+    background-color: blue;
+}
+
+footer {
+    grid-area: footer;
+    background-color: whitesmoke
+}
