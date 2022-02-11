@@ -1,17 +1,17 @@
 @import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
 
 div:first-of-type {
-    background:  linear-gradient(to right, #185b9d, #007bb4, #0099ba, #00b4b2, #42cda1);
+    background-color:  linear-gradient(to right, #185b9d, #007bb4, #0099ba, #00b4b2, #42cda1);
 }
 
 div:last-of-type {
-    background: linear-gradient(to right, #a83278, #c53764, #d5494b, #da6431, #d28212);
+    background-color: linear-gradient(to right, #a83278, #c53764, #d5494b, #da6431, #d28212);
   }
 
 .viewport {
 position: relative;
 width: 60vw;
-height: 110vh;
+height: 100vh;
 margin: 0 auto;
   }
 
