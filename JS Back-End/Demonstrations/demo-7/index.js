@@ -19,6 +19,8 @@ app.use(
 
 const bcrypt = require(`bcrypt`);
 
+const secret = "gigamegaultrasecret";
+
 app.use(express.urlencoded({ extended: true }));
 
 // Custom cookie
@@ -72,18 +74,30 @@ app.get(`/bcrypt/verify/:password`, (req, res) => {
   });
 });
 
+// JWT
+
 app.get(`/token/create/:password`, (req, res) => {
   let payload = {
     id: uniqid(),
     password: req.params.password,
   };
-  let secret = "gigamegaultrasecret";
 
   let token = jwt.sign(payload, secret, { expiresIn: "1h" });
 
   res.cookie(`jwt`, token);
 
   res.send(token);
+});
+
+app.get(`/token/verify`, (req, res) => {
+  let token = req.cookies["jwt"];
+
+  jwt.verify(token, secret, (err, payload) => {
+    if (err) {
+      res.send(err.message);
+    }
+    res.send(payload);
+  });
 });
 
 app.listen(3000);
