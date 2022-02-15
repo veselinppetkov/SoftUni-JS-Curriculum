@@ -12,7 +12,7 @@
 | [JS Applications](https://softuni.bg/trainings/3488/js-applications-october-2021/)  | [Click](https://softuni.bg/certificates/details/120998/566ded97)  |
 | [React JS](https://softuni.bg/trainings/3575/reactjs-november-2021)  | [Click](https://softuni.bg/certificates/details/122755/cd4e846e) | 
 | [HTML & CSS](https://softuni.bg/trainings/3604/html-and-css-january-2022)  | Loading... | 
-| [JS Back-End](https://softuni.bg/trainings/3594/js-back-end-january-2022)  | Loading... | 
+| [JS Back-End /MongoDB, Express.js, Node.js/](https://softuni.bg/trainings/3594/js-back-end-january-2022)  | Loading... | 
 | [Angular](https://softuni.bg/trainings/3603/angular-march-2022)  | Loading... | 
 ![image](https://i.postimg.cc/YqkYTcyW/Graduation-Male-Version.png)
 
