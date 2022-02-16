@@ -5,8 +5,13 @@ const initDb = require("./config/database");
 const express = require("express");
 const app = express();
 
-const cookie = require("cookie-parser");
+const cookies = require("cookie-parser");
 
+app.use(cookies());
+
+const { auth } = require("./middlewares/authMiddleware");
+
+app.use(auth);
 const routes = require("./config/routes");
 require("./config/express")(app);
 
