@@ -2,6 +2,7 @@ const express = require(`express`);
 const router = express.Router();
 
 const cookie = require("cookie-parser");
+const { COOKIE_TOKEN } = require(`../constants`);
 
 const authService = require(`../services/authService`);
 
@@ -16,7 +17,7 @@ router.post(`/login`, async (req, res) => {
     const user = await authService.login(username, password);
     const token = await authService.createToken(user);
 
-    res.cookie(`jwt-token`, token, {
+    res.cookie(COOKIE_TOKEN, token, {
       httpOnly: true,
     });
 

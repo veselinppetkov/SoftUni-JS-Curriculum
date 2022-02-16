@@ -4,7 +4,7 @@ const bcrypt = require(`bcrypt`);
 const jwt = require(`jsonwebtoken`);
 const util = require(`util`);
 
-const SECRET = "C79B8E4B245FD98576EF6CF5C3B82";
+const { SECRET } = require(`../constants`);
 
 const register = function (username, password) {
   return User.create({ username, password });
