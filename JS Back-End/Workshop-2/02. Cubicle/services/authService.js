@@ -2,6 +2,7 @@ const User = require(`../models/User.js`);
 
 const bcrypt = require(`bcrypt`);
 const jwt = require(`jsonwebtoken`);
+const util = require(`util`);
 
 const SECRET = "C79B8E4B245FD98576EF6CF5C3B82";
 
@@ -30,7 +31,9 @@ const createToken = function (user) {
     username: user.username,
   };
 
-  return jwt.sign(payload, SECRET, { expiresIn: "1h" });
+  const jwtAsPromise = util.promisify(jwt.sign);
+
+  return jwtAsPromise(payload, SECRET);
 };
 
 const authService = {
