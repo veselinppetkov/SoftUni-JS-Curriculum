@@ -5,6 +5,8 @@ const initDb = require("./config/database");
 const express = require("express");
 const app = express();
 
+const cookie = require("cookie-parser");
+
 const routes = require("./config/routes");
 require("./config/express")(app);
 

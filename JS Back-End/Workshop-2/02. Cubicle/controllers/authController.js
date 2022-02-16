@@ -1,6 +1,8 @@
 const express = require(`express`);
 const router = express.Router();
 
+const cookie = require("cookie-parser");
+
 const authService = require(`../services/authService`);
 
 router.get(`/login`, (req, res) => {
@@ -12,9 +14,11 @@ router.post(`/login`, async (req, res) => {
     const { username, password } = req.body;
 
     const user = await authService.login(username, password);
-    const token = authService.createToken(user);
+    const token = await authService.createToken(user);
 
-    console.log(user, token);
+    res.cookie(`jwt-token`, token, {
+      httpOnly: true,
+    });
 
     res.redirect(`/`);
   } catch (error) {
