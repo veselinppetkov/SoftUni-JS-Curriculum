@@ -28,4 +28,12 @@ router.get(`/:cubeId`, async (req, res) => {
 
 router.use(`/:cubeId/accessory`, cubeAccessoryController);
 
+router.get(`/:cubeId/edit`, (req, res) => {
+  res.render(`cube/edit`);
+});
+
+router.get(`/:cubeId/delete`, (req, res) => {
+  res.render(`cube/delete`);
+});
+
 module.exports = router;
