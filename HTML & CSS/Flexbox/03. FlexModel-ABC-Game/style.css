@@ -1,0 +1,19 @@
+html {
+    font-family: Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    max-width: 15vw;
+    height: 35rem;
+    align-items: center;
+    flex-direction: column;
+    gap:5px;
+    flex-wrap: wrap;
+    margin: 40px;
+}
+
+.container span {
+    padding: 20px;
+    border: 1px solid black;
+}
