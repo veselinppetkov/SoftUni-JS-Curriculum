@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+header, footer {
+    background-color: rgb(29, 123, 206);
+    width: 100%;
+    flex-basis: 50px;
+    flex-grow: auto;
+    flex-shrink: auto;
+}
+
+main {
+    background-color:blanchedalmond;
+    flex-basis: 70px;
+    flex-grow: 2;
+    flex-shrink: 1;
+}
+
+aside {
+    background-color: aqua;
+    flex-basis: 30px;
+    flex-grow: 1;
+    flex-shrink: 2;
+}
