@@ -1,0 +1,26 @@
+body, ul, li {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+ul {
+    justify-content:space-between;
+    align-items: center;
+}
+
+ul li {
+    margin: 2rem;
+    
+}
+
+ul li img {
+    padding: 2rem;
+    border: 10px solid black;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+
+}
