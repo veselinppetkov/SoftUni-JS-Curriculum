@@ -1,0 +1,68 @@
+html {
+    box-sizing: border-box;
+}
+
+form fieldset {
+    display: flex;
+    position: relative; 
+    flex-direction: column;
+    padding: 2em;
+    border-radius: 5px;
+
+  }
+
+form fieldset legend {
+border: 1px solid gray;
+width: 20%;
+padding: 0.5rem;
+bottom: 120px;
+}
+
+form fieldset button {
+    background-color: rgb(34, 32, 32);
+    color: whitesmoke;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+form fieldset p {
+    position: relative;
+}
+
+form fieldset p label {
+    font-weight: bold;
+}
+
+form fieldset p input {
+    width: 200px;
+}
+
+form fieldset p i {
+    position: absolute;
+    left: 75px;
+    top: 2px;
+}
+
+input[type="submit"]:hover { cursor: pointer; }
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="submit"]:focus,
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="submit"]:hover
+{
+  border-color: #009900;
+}
+    i {
+      position: absolute;
+    }
+  
+    input:focus + i,
+    input:hover + i {
+      color: #009900;
+    }
+
+
+
