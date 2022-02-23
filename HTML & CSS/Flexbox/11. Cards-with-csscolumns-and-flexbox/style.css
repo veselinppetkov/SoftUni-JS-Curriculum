@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(238,238,238);
+    margin: 0;
+}
+
+.cards-layout.masonry {
+display: flex;
+padding: .5rem .5rem 0 .5rem;
+}
