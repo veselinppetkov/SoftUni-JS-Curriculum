@@ -147,6 +147,33 @@ width: 100%;
     text-align: center;
 }
 
+/* CTA Section  */
+
+.cta {
+    padding: 80px 100px;
+    text-align: center;
+}
+
+.cta-title {
+    margin-bottom: 0;
+    font-weight: normal;
+    color: #596467;
+}
+
+.cta-text {
+    margin-top: 0;
+    color: #596467;
+}
+
+.cta-btn {
+    background-color: #009a6f;
+    font-size: 18px;
+    color: white;
+    padding: 12px 26px;
+    margin-top: 20px;
+    border: none;
+}
+
 
 
 
