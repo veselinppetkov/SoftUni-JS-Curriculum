@@ -198,6 +198,23 @@ width: 100%;
     color: #747474;
 }
 
+/* Footer section */
+
+footer {
+    padding: 120px;
+    text-align: center;
+    background-color: #009a6f
+}
+
+.footer-text {
+    color: #afdacd;
+}
+
+.footer-text a {
+    text-decoration: none;
+    color: #e2f0ec;
+}
+
 
 
 
