@@ -35,11 +35,15 @@ router.post(`/register`, async (req, res) => {
   try {
     const { username, password, repeatPassword } = req.body;
 
+    if (password != repeatPassword) {
+      throw new Error(`Passwords don't match`);
+    }
+
     await authService.register(username, password);
 
     res.redirect(`/login`);
   } catch (error) {
-    res.send(error.message);
+    res.status(400).render(`auth/register`, { error: error.message });
   }
 });
 
