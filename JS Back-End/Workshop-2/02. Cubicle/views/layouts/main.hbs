@@ -20,6 +20,13 @@
           <li><a href="/register">Register</a></li>
         </ul>
       </header>
+
+      {{#if}}
+        <div id="notifications">
+          <p id="notification-message">{{error}}</p>
+        </div>
+      {{/if}}
+
       <main>{{{body}}}</main>
     </div>
     <footer>@Cubicle: Exercise for Express.js and Handlebars</footer>
