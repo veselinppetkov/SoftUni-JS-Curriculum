@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat&display=swap');
+
+
+*,*::after,*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+    padding: 1rem;
+}
+
+h1,h2,h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.calendar {
+    max-width: 800px;
+    margin-inline: auto;
+    border-radius: 4px;
+    box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.calendar__topbar {
+    background-color: #ffa200;
+    padding: 0.75rem;
+    color: #fff;
+}
+
+.calendar__topbar span {
+    margin-left: 0.5rem;
+    font-size: 14px;
+}
+
+.event {
+    list-style-type: none;
+    padding: 1rem 1rem 2rem;
+}
+
+li.event {
+    border-bottom: 0.5px solid rgb(185, 177, 177);
+}
+
+li.event:last-child {
+    border-bottom: none;
+}
+
+.event .event__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.event .event_time {
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.event .event__description {
+    line-height: 1.4;
+}
+
