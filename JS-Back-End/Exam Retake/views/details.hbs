@@ -1,0 +1,74 @@
+{{#with post}}
+  <section id="catalog-section">
+
+    <h1 class="item">
+      {{title}}
+      {{#if isAuthor}}
+        <div class="f-right">
+          <a class="action pad-small f-left" href="/edit/{{_id}}">Edit</a>
+          <a class="action pad-small f-left" href="/delete/{{_id}}">Delete</a>
+        </div>
+      {{/if}}
+    </h1>
+    <div class="item padded">
+
+      <div class="layout right large">
+
+        <div class="col">
+          <img src="{{imageURL}}" class="img-large" />
+        </div>
+
+        <div class="content pad-med">
+
+          <p>In category: <strong>{{category}}</strong></p>
+          <p>{{description}}</p>
+
+          <div class="align-center">
+            <div>
+              Current price: $<strong>{{price}}</strong>
+            </div>
+
+            <div>
+              {{#if hasUser}}
+                {{#if hasBidded}}
+                  Bid by
+                  <strong>{{bidders.firstName}} {{bidders.lastName}}</strong>
+                {{/if}}
+              {{else}}
+                No bids
+              {{/if}}
+            </div>
+
+            {{#if canBid}}
+              <form
+                class="vertical"
+                method="get"
+                action="/bid/{{_id}}/{{bidAmount}}"
+              >
+                <label><span>Bid amount</span>
+                  <input
+                    type="number"
+                    name="bidAmount"
+                    id="bidAmount"
+                  /></label>
+                <input class="action" type="submit" value="Place bid" />
+              </form>
+
+              <!-- If current user is the bidder -->
+              <div>
+                You are currently the
+                <strong>highest bidder</strong>
+                for this auction
+              </div>
+            {{/if}}
+
+          </div>
+
+        </div>
+      </div>
+
+      <footer>Listed by {{author.firstName}} {{author.lastName}}</footer>
+    </div>
+
+  </section>
+{{/with}}
